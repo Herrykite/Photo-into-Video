@@ -6,8 +6,8 @@ import time
 
 def pic_video(path, size):
     file_list = os.listdir(path)
-    fps = 24
-    file_path = r'C:/Users/admin/Desktop/' + str(int(time.time())) + '.avi'
+    fps = 60
+    file_path = 'C:/Users/admin/Desktop/' + str(int(time.time())) + '.avi'
     character_code = cv2.VideoWriter_fourcc('M', 'J', 'P', 'G')
     video = cv2.VideoWriter(file_path, character_code, fps, size)
     for item in file_list:
@@ -19,4 +19,4 @@ def pic_video(path, size):
 
 
 if __name__ == "__main__":
-    pic_video('//192.168.20.63/ai/double_camera_data/2020-04-14/155111/c1_rot', (960, 1280))
+    pic_video('D:/output photo', (960, 1280))             # 一定要注意输入路径不能有汉字
